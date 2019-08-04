@@ -1,2 +1,7 @@
+# app
 wunderlist
 bear
+
+# git
+git config --global user.name "MyPoZi"
+git config --global user.email kxx555u.u@gmail.com
