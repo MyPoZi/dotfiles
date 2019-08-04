@@ -1,33 +1,20 @@
-# avr-gcc # AVRマイコン関連のコンパイラ
-# dep # Goの依存関係管理ツール
-direnv # ディレクトリごとに環境変数を設定
-fzf # CLIでインクリメンタルに曖昧な検索が可能
-ghq # リポジトリ管理ツール
-# ghr # GitHubリリースページの作成とリリース物のアップロードを平行で実行するツール
+direnv
+fzf
+ghq
 git
-# git-flow-avh
 go
-# gradle # Groovyで記述するビルド自動化システム
-# httpie # コマンドラインHTTPクライアント
 hub
-# hugo # Goで書かれた静的サイトジェネレータ
-# kotlin
-m-cli # Macをコマンドラインから操作する
+m-cli
 node
-openssl # SSL/TLS cryptography library
+openssl
 openssl@1.1
 pyenv
 ruby
-# sbt
-# scala
-# subnetcalc # IPv4/IPv6 subnet calculator
 tig
-tmux # ターミナルの仮想化
+tmux
 vim
 yarn
-# youtube-dl
 zsh
-zsh-completions # 補完を強化
-#### add some apps
+zsh-completions
 rbenv
 peco
