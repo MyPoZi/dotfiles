@@ -110,7 +110,7 @@ function prompt_ayatk_setup() {
     PROMPT='%(?..%F{red}%B==> [%?]%b%f
 )${SSH_TTY:+"%F{bright red}%n%f%F{magenta}@%f%F{yellow}%m%f "}%F{green}${_prompt_ayatk_pwd}%(!. %B%F{red}#%f%b.)%f${vcs_info_msg_0_}
 ${editor_info[keymap]} '
-    SPROMPT="%{$suggest%}(*´-A-%)? < %F{magenta}%R%f はもしかして %F{green}%r%f かな? [そう!(y),違う!(n),a,e]: "
+    SPROMPT="%{$suggest%} %F{magenta}%R%f は %F{green}%r%f? [y, n]: "
 }
 
 prompt_ayatk_setup "$@"
