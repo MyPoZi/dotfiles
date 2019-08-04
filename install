@@ -33,14 +33,14 @@ ln -s $DOTDIR/vim/vimrc $HOME/.vimrc
 
 # brew install
 echo "Installing package...."
-cat ./brew | while read package
+cat $DOTDIR/brew | while read package
 do
   echo $package
 done
 
 # cask install
 echo "Installing macOS apps...."
-cat ./cask | while read app
+cat $DOTDIR/cask | while read app
 do
   echo $app
 done
