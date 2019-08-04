@@ -32,8 +32,18 @@ ln -s $DOTDIR/zsh/prompt_ayatk_setup $DOTDIR/zsh/.zprezto/modules/prompt/functio
 ln -s $DOTDIR/vim/vimrc $HOME/.vimrc
 
 # brew install
+echo "Installing package...."
+cat ./brew | while read package
+do
+  echo $package
+done
 
 # cask install
+echo "Installing macOS apps...."
+cat ./cask | while read app
+do
+  echo $app
+done
 
 # change shell
 sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
