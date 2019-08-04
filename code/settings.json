@@ -124,5 +124,5 @@
   "textlint.autoFixOnSave": true,
   "go.formatTool": "goimports",
   "go.coverOnSave": true,
-  "vsdocker.imageUser": "docker.io/ayatk"
+  "vsdocker.imageUser": "docker.io/shigasy"
 }

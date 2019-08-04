@@ -2,7 +2,7 @@
 
 TMP_FILE=/tmp/dotfiles.tar.gz
 # dotfiles repository
-REPOSITORY=ayatk/dotfiles
+REPOSITORY=shigasy/dotfiles
 
 DIR=$(cd $(dirname $0); pwd)
 DOTDIR=$HOME/.dotfiles
@@ -30,6 +30,10 @@ ln -s $DOTDIR/zsh/prompt_ayatk_setup $DOTDIR/zsh/.zprezto/modules/prompt/functio
 
 # vim
 ln -s $DOTDIR/vim/vimrc $HOME/.vimrc
+
+# brew install
+
+# cask install
 
 # change shell
 sudo sh -C 'echo "/usr/local/bin/zsh" >> /etc/shells'

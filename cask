@@ -1,16 +1,16 @@
 1password
-android-sdk
-android-studio
-androidtool
+# android-sdk
+# android-studio
+# androidtool
 clipy
-cmd-eikana
-day-o
-discord
+# cmd-eikana
+# day-o
+# discord
 docker
-dropbox
+# dropbox
 firefox
-fork
-gitkraken
+# fork
+# gitkraken
 google-backup-and-sync
 google-chrome
 google-drive-file-stream
@@ -19,11 +19,17 @@ java
 java8
 jetbrains-toolbox
 kitematic
-macdown
-mactex
+# macdown
+# mactex
 macvim
-sketch
-sketchpacks
+# sketch
+# sketchpacks
 skim
-skype
+# skype
 visual-studio-code
+#### add some apps
+iterm2
+alfread
+slack
+dash
+postman
