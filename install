@@ -2,7 +2,7 @@
 
 TMP_FILE=/tmp/dotfiles.tar.gz
 # dotfiles repository
-REPOSITORY=shigasy/dotfiles
+REPOSITORY=mypozi/dotfiles
 
 DIR=$(cd $(dirname $0); pwd)
 DOTDIR=$HOME/.dotfiles
