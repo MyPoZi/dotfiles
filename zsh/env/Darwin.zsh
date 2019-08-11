@@ -1,6 +1,6 @@
 if (( $+commands[brew] )); then
     # brew docterでpyenvのpathがエラーが出るので
-    alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
+    alias brew="env PATH=\"${PATH/\/Users\/${USER}\/\.pyenv\/shims:/}\" brew"
 
     function update() {
         brew update
