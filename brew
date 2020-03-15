@@ -11,6 +11,7 @@ openssl@1.1
 pyenv
 ruby
 tig
+jesseduffield/lazygit/lazygit
 tmux
 vim
 yarn
