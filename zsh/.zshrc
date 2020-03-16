@@ -27,3 +27,6 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 if (( $+commands[zprof] )); then
     zprof | less
 fi
+
+# alias
+alias lg='lazygit'
