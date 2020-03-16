@@ -1,13 +1,31 @@
 #!/bin/sh
 # http://qiita.com/masarakki/items/27f2cb456b4801ccb31b
 
+# リモートリポジトリをfetchする 消えたリモートブランチも掃除
+# masterを最新にする
+# 元いたブランチがマージ済みだったら消す
+# プルリクがマージされた時に威力を発揮する
+# そうじゃなかったら元いたブランチに戻る
+
+# ???
 user=`git config github.user`
+# 標準出力が/dev/nullに変更される
+# 標準エラー出力が標準出力(今は/dev/nullになっている)に変更される
+# 要するに，出力を全て捨てているという意味になる．
 git remote show ${user} > /dev/null 2>&1
+# コマンドの成否を表す数値が特殊変数 $? に自動で設定される。
+# 各コマンドにより異なるが、一般的には、
+# コマンド成功時には「0」
+# 失敗時には「1」(コマンドやエラーの種類によっては 0 以外)
+# つまり、git remote show ${user} > /dev/null 2>&1 でリモートリポジトリを持っていたら0が入る
 has_repo=$?
 
 git fetch --all --prune
+# 変更行数を取得。変更があればmodifiedとして出力され、行数が1以上になる
 modified=`git status | grep modified | wc -l`
+# -gt = greater than 0 より大きいなら stash
 if [ $modified -gt 0 ] ; then git stash ; fi
+# 現在のbranchを取得して、' ' でcut(分けて) 2つ目（branch名）を取得
 branch=`git branch | grep '*' | cut -f 2 -d ' '`
 git checkout master
 git pull --rebase origin master
