@@ -8,6 +8,9 @@ runtime! init/*.vim
 " plugin scripts
 runtime! plugin/*.vim
 
+" :map   :noremap  :unmap     ノーマル、ビジュアル、選択、オペレータ待機
+" :imap  :inoremap :iunmap    挿入
+
 " 矢印キーを無効にする
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -26,3 +29,10 @@ noremap <C-a> <Esc>^i
 " 両端に移動
 noremap <C-h> ^
 noremap <C-l> $
+
+" 折り返しされている行もそのまま移動？
+noremap j gj
+noremap k gk
+
+" 行頭 行末移動
+set whichwrap=b,s,h,l,<,>,[,]
