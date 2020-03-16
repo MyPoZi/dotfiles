@@ -18,9 +18,11 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+" 両端にinsertモードで
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
+" 両端に移動
 noremap <C-h> ^
 noremap <C-l> $
