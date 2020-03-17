@@ -12,6 +12,7 @@ git config --global user.email kxx555u.u@gmail.com
 code --list-extensions > extensions.txt # 拡張機能書き出し
 ./installExtensions.sh # install
 
+VS Codeの拡張機能にsetting syncがある
 
 # TODO
 chrome extension
