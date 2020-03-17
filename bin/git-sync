@@ -20,6 +20,8 @@ git remote show ${user} > /dev/null 2>&1
 # つまり、git remote show ${user} > /dev/null 2>&1 でリモートリポジトリを持っていたら0が入る
 has_repo=$?
 
+# --all すべてのリモートブランチをfetch
+# --prune リモートブランチで消去されたブランチをローカルブランチからも自動的に消去
 git fetch --all --prune
 # 変更行数を取得。変更があればmodifiedとして出力され、行数が1以上になる
 modified=`git status | grep modified | wc -l`
