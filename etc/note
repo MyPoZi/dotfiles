@@ -8,6 +8,11 @@ git config --global user.name "MyPoZi"
 git config --global user.email kxx555u.u@gmail.com
 
 
+# vscode
+code --list-extensions > extensions.txt # 拡張機能書き出し
+./installExtensions.sh # install
+
+
 # TODO
 chrome extension
 vscode extension
