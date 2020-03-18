@@ -62,6 +62,7 @@ if (( $+commands[java] )); then
 fi
 
 export PATH=$PATH:$HOME/.dotfiles/bin
+export PATH=$PATH:$HOME/.dotfiles/git
 
 # openssl
 export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
