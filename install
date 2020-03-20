@@ -4,16 +4,19 @@ TMP_FILE=/tmp/dotfiles.tar.gz
 # dotfiles repository
 REPOSITORY=mypozi/dotfiles
 
+# Homeディレクトリに戻って、pwd
 DIR=$(cd $(dirname $0); pwd)
 DOTDIR=$HOME/.dotfiles
 
 # install package manager
+# macであり、 and type brew が実行出来なかったら
 if [[ $(uname) == 'Darwin' && ! -x $(type brew > /dev/null 2>&1) ]]; then
   echo "Installing HomeBrew...."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install zsh
 fi
 
+# macであり、 and type git が実行出来なかったら 出力は捨てる
 # Download repository
 echo "Downloading dotfiles...."
 if [[ $(uname) == 'Darwin' && ! -x $(type git > /dev/null 2>&1) ]] ; then
@@ -45,6 +48,13 @@ do
   brew cask install $app
 done
 
+
+# sh -c とは
+## cmdstring をシェルの入力行であるかのように実行し、次に終了 します。これは、単一コマンドのためにシェルを呼び出す プログラム (例えば、エディター) によって使用されます。
+
 # change shell
+# /etc/shelss とは 
+## ログインシェルにできるプログラムをフルパスで記述する。ここに登録されていないプログラムをログインシェルにすることはできない。
 sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+# ログインshell 切り替え
 sudo chsh -s /usr/local/bin/zsh
