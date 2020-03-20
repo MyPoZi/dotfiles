@@ -17,3 +17,6 @@ VS Codeの拡張機能にsetting syncがある
 # TODO
 chrome extension
 tigrc
+
+# brew tapとは
+公式以外のリポジトリをフォーミュラとしてHomebrewに追加するもので、brewのもとでinstall,uninstall,updateなどが行えます
