@@ -1,11 +1,8 @@
 #!/bin/bash
 
-TMP_FILE=/tmp/dotfiles.tar.gz
 # dotfiles repository
 REPOSITORY=mypozi/dotfiles
 
-# Homeディレクトリに戻って、pwd
-DIR=$(cd $(dirname $0); pwd)
 DOTDIR=$HOME/.dotfiles
 
 # install package manager
