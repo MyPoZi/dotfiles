@@ -9,10 +9,12 @@
 
 # ???
 user=`git config github.user`
+
 # 標準出力が/dev/nullに変更される
 # 標準エラー出力が標準出力(今は/dev/nullになっている)に変更される
 # 要するに，出力を全て捨てているという意味になる．
 git remote show ${user} > /dev/null 2>&1
+
 # コマンドの成否を表す数値が特殊変数 $? に自動で設定される。
 # 各コマンドにより異なるが、一般的には、
 # コマンド成功時には「0」
@@ -23,16 +25,28 @@ has_repo=$?
 # --all すべてのリモートブランチをfetch
 # --prune リモートブランチで消去されたブランチをローカルブランチからも自動的に消去
 git fetch --all --prune
+
 # 変更行数を取得。変更があればmodifiedとして出力され、行数が1以上になる
 modified=`git status | grep modified | wc -l`
+
 # -gt = greater than 0 より大きいなら stash
 if [ $modified -gt 0 ] ; then git stash ; fi
+
 # 現在のbranchを取得して、' ' でcut(分けて) 2つ目（branch名）を取得
 branch=`git branch | grep '*' | cut -f 2 -d ' '`
 git checkout master
+
+# git fetch origin master && git merge origin/master のrebase版
+# git fetch origin master リモートのmasterをorigin/masterに取ってくる
+# git rebase origin/master をする
+# 誰かが同じブランチにmergeされていた場合、non-fast-forwardであるため、mergeコミットが生成されるが、それがされない。rebaseなら。
+# fast forward になる
+# git fetch master 
 git pull --rebase origin master
+
 if [ $has_repo = 0 ] ; then git push ${user} master; fi
 if [ $branch != 'master' ] ; then
+#   元いたbranchがマージされていたら = 元いたブランチがmergedで出力されれば消す。ないならcheckout
     if [ `git branch --merged | grep ${branch} | wc -l` -eq 1 ]
     then
         git branch -d ${branch}
