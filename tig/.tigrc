@@ -128,6 +128,9 @@ bind refs    D      ?git branch -d %(branch)
 # D でトラッキングされていないファイルを削除 (status-view)
 bind status  D      ?git clean -d -f -- %(file)
 
+# ! でトラッキングされているファイルをcheckout
+bind status  !      ?git checkout %(file)
+
 # D で stash を削除 (`!` と同じ) (stash-view)
 bind stash   D      ?git stash drop %(stash)
 
