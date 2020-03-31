@@ -30,3 +30,4 @@ fi
 
 # alias
 alias lg='lazygit'
+alias ls='exa --long --header --git'
