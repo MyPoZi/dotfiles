@@ -22,3 +22,5 @@ rbenv
 peco
 jq
 tree
+bat
+exa
