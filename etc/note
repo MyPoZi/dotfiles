@@ -26,11 +26,20 @@ chrome extension
 # history fzf検索
 ^r
 
-# fd
-fzfのファイル検索&移動
+# cdd
+ディレクトリの履歴をfzfで絞り、移動
+
+# agg
+全体検索をfzfで絞り、vimで開く
+
 
 # tree-select-buffer
 ファイルを貼れる. fzfと組み合わせ。
 vim ^t であいまい検索
 https://petitviolet.hatenablog.com/entry/20190708/1562544000
 
+^v^tでツリー検索し、vimで開く
+
+# github関連
+github-issue-browse ^g^b^i
+github-pr-checkout ^g^p
