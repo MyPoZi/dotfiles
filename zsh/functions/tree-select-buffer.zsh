@@ -1,3 +1,4 @@
+# ref: https://petitviolet.hatenablog.com/entry/20190708/1562544000
 # treeの一覧からheadしながらファイルを選択する
 function tree_select() {
   tree -N -a --charset=o -f -I '.git|.idea|resolution-cache|target/streams|node_modules' | \
@@ -27,3 +28,14 @@ function tree_select_buffer(){
 }
 zle -N tree_select_buffer
 bindkey "^t" tree_select_buffer
+
+# treeから選択したファイルをvimで開く
+function open_from_tree_vim(){
+  local selected_file=$(tree_select)
+  if [ -n "$selected_file" ]; then
+    BUFFER="vim $selected_file"
+  fi
+  zle accept-line
+}
+zle -N open_from_tree_vim
+bindkey "^v^t" open_from_tree_vim
