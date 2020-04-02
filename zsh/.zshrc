@@ -41,6 +41,8 @@ fi
 alias cdd='fzf-cdr'
 function fzf-cdr() {
     target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf`
+    # ${変数名/置換前文字列/置換後文字列}
+    # ~はcliでしか使えない。shellスクリプトは$HOMEを使うから置換が必要。
     target_dir=`echo ${target_dir/\~/$HOME}`
     if [ -n "$target_dir" ]; then
         cd $target_dir
