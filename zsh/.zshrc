@@ -49,6 +49,21 @@ function fzf-cdr() {
     fi
 }
 
+# agの結果をfzfで絞り込み選択するとvimで開く
+alias agg="_agAndVim"
+function _agAndVim() {
+    if [ -z "$1" ]; then
+        echo 'Usage: agg PATTERN'
+        return 0
+    fi
+    result=`ag $1 | fzf`
+    line=`echo "$result" | awk -F ':' '{print $2}'`
+    file=`echo "$result" | awk -F ':' '{print $1}'`
+    if [ -n "$file" ]; then
+        vim $file +$line
+    fi
+}
+
 # alias
 alias lg='lazygit'
 alias ls='exa --long --header --git'
