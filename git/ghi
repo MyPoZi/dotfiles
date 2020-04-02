@@ -1,9 +1,0 @@
-#!/bin/sh
-
-issue=`gh issue list | fzf | cut -f 1 -d ' '`
-issue2=`gh issue list | fzf`
-hoge=`echo ${issue} | cut -f 1 -d ' '`
-echo ${hoge}
-number=`"${issue2}" | cut -f 1 -d ' '`
-echo ${number}
-gh issue view ${number}
