@@ -68,9 +68,9 @@ export PATH=$PATH:$HOME/.dotfiles/git
 export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
 
 # pipenv
-if (( $+commands[pipenv] )); then
-    export PIPENV_VENV_IN_PROJECT=1
-fi
+#if (( $+commands[pipenv] )); then
+#    export PIPENV_VENV_IN_PROJECT=1
+#fi
 
 # fzf
 if (( $+commands[fzf] )); then
@@ -85,6 +85,11 @@ if (( $+commands[fzf] )); then
         ag -g "" "$1"
     }
 fi
+
+# node
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 
 #
 # Less

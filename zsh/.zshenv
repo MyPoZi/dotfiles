@@ -15,3 +15,4 @@ path=(
     /usr/local/{bin,sbin}
     $path
 )
+eval "$(nodenv init -)"
