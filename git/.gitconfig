@@ -185,5 +185,5 @@
 	name = Xcode project files merger
 	driver = mergepbx %O %A %B
 [user]
-	name = MyPoZi
+	name = shigasy
 	email = kxx555u.u@gmail.com
