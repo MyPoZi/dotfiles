@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>8878A5AE-F355-4AF5-B2F5-CBE5B0E0974D</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>A3A30ADE-6B85-43FC-9150-0392F2B268C5</key>
@@ -37,6 +41,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</key>
@@ -48,6 +54,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -56,6 +64,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -93,6 +103,10 @@ $query = "{query}";
 // use the factory to create a Faker\Generator instance
 $faker = Faker\Factory::create($locale);
 echo $faker-&gt;$query;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>1</integer>
 			</dict>
@@ -101,7 +115,7 @@ echo $faker-&gt;$query;</string>
 			<key>uid</key>
 			<string>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -122,7 +136,7 @@ echo $faker-&gt;$query;</string>
 			<key>uid</key>
 			<string>15299C7A-CDEA-4359-8898-446F2892DB7C</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -131,11 +145,7 @@ echo $faker-&gt;$query;</string>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>copied to clipboard</string>
@@ -147,7 +157,7 @@ echo $faker-&gt;$query;</string>
 			<key>uid</key>
 			<string>A70A4E1E-712E-4575-967A-0AA64960904D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -167,6 +177,10 @@ $w-&gt;set( 'preferred.locale', $locale, 'settings.plist' );
 
 echo 'Set preferred locale to '.$locale;
 </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>1</integer>
 			</dict>
@@ -175,7 +189,7 @@ echo 'Set preferred locale to '.$locale;
 			<key>uid</key>
 			<string>A3A30ADE-6B85-43FC-9150-0392F2B268C5</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -184,13 +198,15 @@ echo 'Set preferred locale to '.$locale;
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>002F1C1E-C4D3-4A34-8E97-C3605E6BC4B8</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -211,7 +227,7 @@ echo 'Set preferred locale to '.$locale;
 			<key>uid</key>
 			<string>8878A5AE-F355-4AF5-B2F5-CBE5B0E0974D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -220,12 +236,10 @@ echo 'Set preferred locale to '.$locale;
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
 				<false/>
-				<key>sticky</key>
-				<false/>
+				<key>text</key>
+				<string></string>
 				<key>title</key>
 				<string>{query}</string>
 			</dict>
@@ -234,7 +248,7 @@ echo 'Set preferred locale to '.$locale;
 			<key>uid</key>
 			<string>5F3FF27A-8C79-4D0A-8B72-9E163AFEE98D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -243,36 +257,50 @@ echo 'Set preferred locale to '.$locale;
 	<dict>
 		<key>002F1C1E-C4D3-4A34-8E97-C3605E6BC4B8</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>180</real>
 		</dict>
 		<key>15299C7A-CDEA-4359-8898-446F2892DB7C</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
 		<key>5F3FF27A-8C79-4D0A-8B72-9E163AFEE98D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>300</real>
 		</dict>
 		<key>8878A5AE-F355-4AF5-B2F5-CBE5B0E0974D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>180</real>
 		</dict>
 		<key>A3A30ADE-6B85-43FC-9150-0392F2B268C5</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>180</real>
 		</dict>
 		<key>A70A4E1E-712E-4575-967A-0AA64960904D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
 		<key>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>

